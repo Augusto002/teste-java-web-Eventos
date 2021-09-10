@@ -7,8 +7,8 @@ sendo avaliado.
 Após executar o comando acima, basta apenas abrir os seguintes endereços e visualizar a execução do projeto:
 
 ``` 
-http://localhost:8080/api/evento  <-- Para adicionar Evento
-http://localhost:8080/api/evento/1 <-- Para adicionar Usuario através do ID do Evento
+http://localhost:8080/api/evento              <-- Para adicionar Evento
+http://localhost:8080/api/evento/1            <-- Para adicionar Usuario através do ID do Evento
 http://localhost:8080/api/evento/listaevento  <-- Para listar eventos
 ```
 
