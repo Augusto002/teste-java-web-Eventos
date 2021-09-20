@@ -1,5 +1,6 @@
 package com.EUMESMO.teste_evento.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -38,10 +39,9 @@ public class Evento {
     private String horarioFim;
 
 
-   /* @JoinTable(name = "evento_usuario",
-             joinColumns = @JoinColumn(name = "evento_id"),
-             inverseJoinColumns = @JoinColumn(name = "alunos_id")  )*/
-    @OneToMany(mappedBy = "evento"/*, cascade=CascadeType.ALL, orphanRemoval=true*/)
+
+    @OneToMany(mappedBy = "evento", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Usuario> usuarios;
 
 }
